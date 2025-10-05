@@ -31,7 +31,8 @@ if (!fs.existsSync(uploadDir)) {
 
 // API Creation
 app.get("/", async (req, res) => {
-  res.send("Server is running on port");
+  res.send("Server is running on port", PORT);
+  console.log(PORT)
 });
 
 
@@ -281,12 +282,12 @@ app.post('/getcart', fetchUser , async (req, res) => {
 })
 
 // Listining port
-// app.listen(PORT, (error) => {
-//   if (!error) {
-//     console.log("Server running on port");
-//   } else{
-//     console.log(error);
-//   }
-// });
+app.listen(PORT, (error) => {
+  if (!error) {
+    console.log("Server running on port");
+  } else{
+    console.log(error);
+  }
+});
 
 module.exports = app;
