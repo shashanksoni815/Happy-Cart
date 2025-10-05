@@ -281,7 +281,7 @@ app.post('/getcart', fetchUser , async (req, res) => {
   res.json(userData.cartData);
 })
 
-// Listining port
+
 app.listen(PORT, (error) => {
   if (!error) {
     console.log("Server running on port");
